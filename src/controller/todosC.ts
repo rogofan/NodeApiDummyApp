@@ -3,6 +3,7 @@ import { Todo } from "../models/todosM";
 
 const TODOS: Todo[] = [];
 
+//Add new todo POST
 export const createTodo: RequestHandler = (req, res, next) => {
   const text = (req.body as { text: string }).text;
   const newTodo = new Todo(Math.random().toString(), text);
